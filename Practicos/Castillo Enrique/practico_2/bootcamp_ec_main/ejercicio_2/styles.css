@@ -1,0 +1,107 @@
+/* ===== Estilos generales del body ===== */
+body {
+    background-color: #ecf0f1;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+header h1 {
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Resaltado de palabras HTML y CSS en el header */
+header span {
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* ===== Títulos ===== */
+h2 {
+    color: #ffffff;
+    background-color: #3f6fb5;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12px;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+}
+
+/* ===== Párrafos ===== */
+p {
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+/* ===== Secciones ===== */
+section {
+    margin-bottom: 30px;
+    padding: 0 20px 20px 20px;
+}
+
+/* ===== Enlaces ===== */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+/* ===== Imágenes ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Listas ===== */
+ul {
+    list-style-type: disc;
+    padding-left: 30px;
+    line-height: 1.8;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 30px;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #34495e;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 0;
+}

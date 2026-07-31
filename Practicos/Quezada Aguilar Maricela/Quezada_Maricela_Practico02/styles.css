@@ -1,0 +1,80 @@
+header{
+    background-color: rgb(18, 92, 141);
+    text-align: center;
+    padding: 0.2%;
+}
+header span {
+    color: rgb(87, 218, 87);
+}
+.subtituloheader{
+    background-color: rgb(18, 92, 141);
+    color: white;
+}
+
+body{
+    background-color: rgb(240, 231, 231);
+    margin: 0px;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+h1{
+    color: rgb(255, 252, 252);
+    line-height: 40px; 
+}
+h2{
+    background-color: rgb(11, 121, 172);
+    color: rgb(255, 255, 255);
+    line-height: 40px;
+    padding: 10px; 
+}
+
+
+p{
+    color: black;
+    line-height: 20px;
+    margin: 15px;
+}
+
+a{
+    color: red;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(39, 11, 194);
+}
+
+img{
+    max-width: 55%;
+    height: auto;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+ul{
+    list-style-type: square;
+    line-height: 20px;
+}
+
+ol{
+    line-height: 20px; 
+}
+
+footer {
+    background-color: rgb(188, 223, 238);
+    color: blue;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid black;
+}
+
+section {
+    margin: 15px;
+    padding: 0%;
+}
+
+
+.section-uno{
+    background-color: rgb(209, 250, 250);
+}
