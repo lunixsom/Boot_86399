@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Zone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <img src="assets/images/logo.png" alt="Logo Gaming Zone" class="logo">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Juegos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Aquí está la sección principal que recibe al visitante -->
+        <section id="inicio" class="hero-section">
+            <!-- Este es el título principal que dice de qué trata la página -->
+            <h1>Bienvenido a Gaming Zone</h1>
+            <p>Tu destino para las últimas noticias, reseñas y lanzamientos de videojuegos. Explora nuestro catálogo de juegos destacados y mantente al día con las tendencias del mundo gaming.</p>
+        </section>
+
+        <section id="menu" class="games-section">
+            <!-- Acá mostramos los juegos más importantes con su imagen y descripción -->
+            <h2>Juegos Destacados</h2>
+
+            <article class="game-card">
+                <!-- Esta imagen presenta el juego destacado -->
+                <img src="assets/images/1.avif" alt="Legend of Zelda: Breath of the Wild" class="game-image">
+                <div class="game-content">
+                    <h3>Legend of Zelda: Breath of the Wild</h3>
+                    <p>Viaja a través de vastas praderas, bosques y cimas de montañas mientras descubres cómo cayó en la ruina el reino de Hyrule. Actualizado con mejoras para un mayor rendimiento, este título ofrece exploración ilimitada y aventuras inolvidables.</p>
+                    <p>Disponible en Nintendo Switch.</p>
+                    <p class="price">$59.99</p>
+                    <button class="btn">Comprar</button>
+                </div>
+            </article>
+
+            <article class="game-card">
+                <img src="assets/images/2.avif" alt="Mario Kart World" class="game-image">
+                <div class="game-content">
+                    <h3>Mario Kart™ World</h3>
+                    <p>Conduce por un mundo conectado de pistas y caminos. Explora montañas, bosques y ciudades en modo Paseo libre, mientras disfrutas de cambios climáticos dinámicos que transforman cada carrera.</p>
+                    <p>Disponible en Nintendo Switch.</p>
+                    <p class="price">$113.399</p>
+                    <button class="btn">Comprar</button>
+                </div>
+            </article>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <form action="#" method="post" class="contact-form">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="John Doe" required>
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+
+        <section id="servicios" class="services-section">
+            <h2>Servicios</h2>
+            <p>En Gaming Zone, ofrecemos una variedad de servicios para mejorar tu experiencia de juego y mantenerte conectado con la comunidad gamer.</p>
+            <ul>
+                <li>Venta de videojuegos físicos y digitales.</li>
+                <li>Reseñas y recomendaciones personalizadas.</li>
+                <li>Eventos y torneos de gaming.</li>
+                <li>Soporte técnico para consolas y juegos.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Gaming Zone - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

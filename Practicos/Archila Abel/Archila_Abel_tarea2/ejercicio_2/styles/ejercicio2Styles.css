@@ -1,0 +1,154 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    /* Aplicara atrivutos globales para la tipografica */
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: 
+        "slnt" 0,
+        "CRSV" 0,
+        "SHRP" 0;
+}
+
+#hero {
+    /* Tamaño del div y caracteristicas */
+    height: 450px;
+    color: #e8e8e8;
+    text-align: center;
+    background-image: url("../assets/travel.webp");
+
+    /* Ajustes para la imagen de fondo */
+    /* Hace que la imagen cobra todo el div sin deformarse */
+    background-size: cover;
+    background-position: center 75%; /* Mueve el foco de la imagen hacia abajo para centrar la vista en las piernas y la maleta */
+
+    /* Texto sobre la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Sombra al texto para que ayude a ser legible */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+#hero h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+#hero p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+/* Una pequña animacion para los cintillos */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0; /* Transparente */
+        transform: translateY(20px); /* empieza 20px abajo */
+    }
+    100% {
+        opacity: 1; /* Visible */
+        transform: translateY(0) /* Llega a su posicion original */
+    }
+}
+
+.cintillo {
+    background-color: #3BACD9;
+    text-align: center;
+    color: #e8e8e8;
+    height: 50px;
+
+    /* Flexbox para centrar el contenido */
+    display: flex;
+    justify-content: center; /* centro horizontal */
+    align-items: center;     /* centro vertical */
+
+    h2 {
+        margin: 0;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+
+        /* Aplicando la animacion */
+        animation: fade-in-up 1.2s ease-out infinite alternate;
+    }
+}
+
+.main_seccion1_skyblue {
+    background-color: rgba(0, 50, 120, 0.8);
+    height: 25%;
+    margin-bottom: 16px;
+    p {
+        margin: 0;
+        text-align: center;
+        color: #e8e8e8;
+    }
+    a {
+        color: #4AD97C;
+        text-decoration: none;
+    }
+}
+
+/* figure se convierte en la caja contenedora por el "position: relative"  */
+section figure {
+    /* relative vuelve a figure un punto de referencia para mover a los hijos
+    en base a esa posicion. */
+    position: relative;
+/* 
+Para poder centrar las letras tengo que hacer al contenedor un bloque
+si no, este ignorará las instrucciones del margin.
+*/
+    display: block;
+    margin: 3% auto;
+    width: 100%;
+    max-width: 1024px;
+    height: 450px;
+}
+
+section figure img {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* Evita que la imagen se deforme, si fuera necesario la recorta pero no 
+    la deforma  */
+    object-fit: cover;
+    /* Hace que la imagen se pocicione al centro dejando lo mas importante ahi,
+    si hay que hacer un corte lo hara de los bordes  */
+    object-position: center;
+}
+
+section figcaption {
+    /* Esto eleva al objeto a una capa superior, lo vuelve flotante, los elementos
+    debajo de el ocupan su espacio y al elemento lo podemos mover a nuestro antojo,
+    de esta forma puedo mover las letras y posicionarlas donde yo quiera.
+    Toma como base a "figure" que es su padre para moverse en referencia a el  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Centra el texto a la imagen  */
+    transform: translate(-50%, -50%);
+    margin: 0;
+    white-space: nowrap;
+
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 5vw;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-transform: uppercase;
+
+    letter-spacing: -0.04em;
+    line-height: 0.85;
+
+    text-shadow: 3px 3px 15px (0, 0, 0, 0.4);
+}
+
