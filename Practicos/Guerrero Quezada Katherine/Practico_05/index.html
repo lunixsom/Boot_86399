@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO JOHN DOE</title>
+
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Portfolio de John Doe, Desarrollador Full Stack especializado en el stack MERN. Creación de aplicaciones web modernas, escalables y centradas en el usuario.">
+    <meta name="author" content="John Doe">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="John Doe | Desarrollador Full Stack">
+    <meta property="og:description" content="Transformo ideas en aplicaciones web modernas y funcionales. Especializado en el stack MERN con pasión por el diseño limpio y código eficiente.">
+    <meta property="og:image" content="assets/images/hero.jpg">
+    <meta property="og:url" content="https://johndoe.dev">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="John Doe | Desarrollador Full Stack">
+    <meta name="twitter:description" content="Transformo ideas en aplicaciones web modernas y funcionales. Especializado en el stack MERN con pasión por el diseño limpio y código eficiente.">
+    <meta name="twitter:image" content="assets/images/hero.jpg">
+    <meta name="twitter:creator" content="@johndoe">
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar Sticky -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#hero">
+                    <img src="assets/images/logo.PNG" alt="John Doe" height="42">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hero">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#habilidades">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonios">Testimonios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-contact ms-lg-3">Contáctame</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Sección 2: Hero Section -->
+        <section id="hero" class="d-flex align-items-center justify-content-center text-center">
+            <span id="inicio" class="position-absolute top-0"></span>
+            <div class="container hero-content">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-xl-8">
+                        <h1 class="hero-title">Hola, soy John Doe</h1>
+                        <div class="hero-divider"></div>
+                        <h2 class="hero-subtitle">Desarrollador Full Stack | Creador de Experiencias Web</h2>
+                        <p class="hero-description">
+                            Transformo ideas en aplicaciones web modernas y funcionales. Especializado en el stack MERN
+                            con pasión por el diseño limpio y código eficiente.
+                        </p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                            <a href="#proyectos" class="btn btn-hero-primary">Ver Mis Proyectos</a>
+                            <a href="#" class="btn btn-hero-outline">Descargar CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Sobre Mí -->
+        <section id="sobre-mi" class="py-5">
+            <div class="container py-4 py-lg-5">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
+                        <img src="assets/images/profile.svg" alt="John Doe"
+                            class="img-fluid rounded-circle profile-img">
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <h2 class="section-title">Sobre Mí</h2>
+                        <p class="mb-3">
+                            Soy un desarrollador full stack apasionado por crear soluciones digitales que generen
+                            impacto. Con experiencia en tecnologías modernas como React, Node.js y MongoDB, me
+                            especializo en construir aplicaciones web escalables y centradas en el usuario.
+                        </p>
+                        <p class="mb-4">
+                            Cuando no estoy programando, disfruto contribuir a proyectos open source, aprender nuevas
+                            tecnologías y compartir conocimiento con la comunidad de desarrolladores.
+                        </p>
+                        <ul class="interests-list list-unstyled mb-0">
+                            <li>
+                                <i class="fas fa-laptop-code me-2"></i> Desarrollo Web Moderno
+                            </li>
+                            <li>
+                                <i class="fas fa-palette me-2"></i> UI/UX Design
+                            </li>
+                            <li>
+                                <i class="fab fa-github me-2"></i> Open Source
+                            </li>
+                            <li>
+                                <i class="fas fa-book me-2"></i> Aprendizaje Continuo
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Habilidades -->
+        <section id="habilidades" class="py-5">
+            <div class="container py-4 py-lg-5">
+                <h2 class="section-title mb-4">Mis Habilidades</h2>
+                <div class="row g-4">
+                    <!-- Categoría 1: Frontend -->
+                    <div class="col-12 col-md-4">
+                        <div class="card skill-card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="skill-category-title mb-4">
+                                    <i class="fas fa-code me-2"></i>Frontend
+                                </h3>
+
+                                <div class="skill-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">HTML5 & CSS3</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="HTML5 & CSS3" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">JavaScript ES6+</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="JavaScript ES6+" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">React.js</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="React.js" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">Bootstrap 5</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="Bootstrap 5" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 2: Backend -->
+                    <div class="col-12 col-md-4">
+                        <div class="card skill-card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="skill-category-title mb-4">
+                                    <i class="fas fa-server me-2"></i>Backend
+                                </h3>
+
+                                <div class="skill-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">Node.js</span>
+                                        <span class="skill-percentage">75%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="Node.js" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">Express.js</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="Express.js" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">MongoDB</span>
+                                        <span class="skill-percentage">70%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="MongoDB" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 70%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">RESTful APIs</span>
+                                        <span class="skill-percentage">85%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="RESTful APIs" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 3: Herramientas -->
+                    <div class="col-12 col-md-4">
+                        <div class="card skill-card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="skill-category-title mb-4">
+                                    <i class="fas fa-tools me-2"></i>Herramientas
+                                </h3>
+
+                                <div class="skill-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">Git & GitHub</span>
+                                        <span class="skill-percentage">90%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="Git & GitHub" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">VS Code</span>
+                                        <span class="skill-percentage">95%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="VS Code" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 95%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">Postman</span>
+                                        <span class="skill-percentage">80%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="Postman" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span class="skill-name">Figma</span>
+                                        <span class="skill-percentage">70%</span>
+                                    </div>
+                                    <div class="progress" role="progressbar" aria-label="Figma" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 5: Proyectos -->
+        <section id="proyectos" class="py-5">
+            <div class="container py-4 py-lg-5">
+                <h2 class="section-title mb-4">Mis Proyectos</h2>
+                <div class="row g-4">
+                    <!-- Proyecto 1 -->
+                    <div class="col-12 col-md-6">
+                        <div class="card project-card h-100 border-0">
+                            <img src="assets/images/proyecto1.avif" class="card-img-top" alt="E-Commerce Platform">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h3 class="card-title mb-2">E-Commerce Platform</h3>
+                                <p class="card-text mb-3">
+                                    Plataforma de comercio electrónico completa con carrito de compras, pasarela de pagos y panel de administración.
+                                </p>
+                                <div class="project-tags mb-3 mt-auto">
+                                    <span class="badge project-badge me-1">React</span>
+                                    <span class="badge project-badge me-1">Node.js</span>
+                                    <span class="badge project-badge me-1">MongoDB</span>
+                                    <span class="badge project-badge">Stripe</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-ver-mas" data-bs-toggle="modal" data-bs-target="#modalProyecto1">
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="col-12 col-md-6">
+                        <div class="card project-card h-100 border-0">
+                            <img src="assets/images/proyecto2.jpg" class="card-img-top" alt="Task Manager App">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h3 class="card-title mb-2">Task Manager App</h3>
+                                <p class="card-text mb-3">
+                                    Aplicación de gestión de tareas con drag & drop, categorías personalizadas y sincronización en tiempo real.
+                                </p>
+                                <div class="project-tags mb-3 mt-auto">
+                                    <span class="badge project-badge me-1">React</span>
+                                    <span class="badge project-badge me-1">Firebase</span>
+                                    <span class="badge project-badge me-1">Material-UI</span>
+                                    <span class="badge project-badge">Real-time</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-ver-mas" data-bs-toggle="modal" data-bs-target="#modalProyecto2">
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 3 -->
+                    <div class="col-12 col-md-6">
+                        <div class="card project-card h-100 border-0">
+                            <img src="assets/images/proyecto3.jpg" class="card-img-top" alt="Weather Dashboard">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h3 class="card-title mb-2">Weather Dashboard</h3>
+                                <p class="card-text mb-3">
+                                    Dashboard meteorológico con pronóstico de 7 días, mapas interactivos y alertas personalizadas.
+                                </p>
+                                <div class="project-tags mb-3 mt-auto">
+                                    <span class="badge project-badge me-1">JavaScript</span>
+                                    <span class="badge project-badge me-1">API</span>
+                                    <span class="badge project-badge me-1">Chart.js</span>
+                                    <span class="badge project-badge">Vanilla JS</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-ver-mas" data-bs-toggle="modal" data-bs-target="#modalProyecto3">
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 4 -->
+                    <div class="col-12 col-md-6">
+                        <div class="card project-card h-100 border-0">
+                            <img src="assets/images/proyecto4.jpg" class="card-img-top" alt="Portfolio Generator">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h3 class="card-title mb-2">Portfolio Generator</h3>
+                                <p class="card-text mb-3">
+                                    Generador de portfolios personalizables con múltiples templates y exportación a HTML/CSS.
+                                </p>
+                                <div class="project-tags mb-3 mt-auto">
+                                    <span class="badge project-badge me-1">Vue.js</span>
+                                    <span class="badge project-badge me-1">Node.js</span>
+                                    <span class="badge project-badge me-1">Express</span>
+                                    <span class="badge project-badge">SPA</span>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-ver-mas" data-bs-toggle="modal" data-bs-target="#modalProyecto4">
+                                        Ver más
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals de Proyectos -->
+        <!-- Modal Proyecto 1 -->
+        <div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProyecto1Label">E-Commerce Platform</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <img src="assets/images/proyecto1.avif" alt="E-Commerce Platform" class="img-fluid w-100 modal-project-img mb-3">
+                        <p>
+                            Desarrollé una plataforma de e-commerce completa desde cero utilizando el stack MERN. La aplicación incluye un sistema de autenticación robusto, carrito de compras persistente, integración con Stripe para pagos seguros, y un panel de administración completo para gestionar productos, órdenes y usuarios.
+                        </p>
+                        <h6 class="fw-bold mb-2">Características principales:</h6>
+                        <ul class="mb-3">
+                            <li>Autenticación de usuarios con JWT</li>
+                            <li>Carrito de compras con persistencia en base de datos</li>
+                            <li>Pasarela de pagos Stripe integrada</li>
+                            <li>Panel de administración completo</li>
+                            <li>Sistema de búsqueda y filtros avanzados</li>
+                            <li>Diseño responsive y accesible</li>
+                        </ul>
+                        <div class="modal-tags mb-2">
+                            <span class="badge project-badge me-1">React</span>
+                            <span class="badge project-badge me-1">Node.js</span>
+                            <span class="badge project-badge me-1">MongoDB</span>
+                            <span class="badge project-badge me-1">Stripe</span>
+                            <span class="badge project-badge">Express</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-modal-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                        <a href="#" class="btn btn-modal-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Proyecto 2 -->
+        <div class="modal fade" id="modalProyecto2" tabindex="-1" aria-labelledby="modalProyecto2Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProyecto2Label">Task Manager App</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <img src="assets/images/proyecto2.jpg" alt="Task Manager App" class="img-fluid w-100 modal-project-img mb-3">
+                        <p>
+                            Aplicación web moderna para gestión de tareas y proyectos inspirada en herramientas como Trello. Implementé funcionalidad de arrastrar y soltar usando React DND, sincronización en tiempo real con Firebase, y un diseño intuitivo con Material-UI.
+                        </p>
+                        <h6 class="fw-bold mb-2">Características principales:</h6>
+                        <ul class="mb-3">
+                            <li>Drag & drop entre columnas de estado</li>
+                            <li>Sincronización en tiempo real</li>
+                            <li>Categorías y etiquetas personalizables</li>
+                            <li>Sistema de prioridades y fechas límite</li>
+                            <li>Modo colaborativo (múltiples usuarios)</li>
+                            <li>Dark mode integrado</li>
+                        </ul>
+                        <div class="modal-tags mb-2">
+                            <span class="badge project-badge me-1">React</span>
+                            <span class="badge project-badge me-1">Firebase</span>
+                            <span class="badge project-badge me-1">Material-UI</span>
+                            <span class="badge project-badge">Real-time</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-modal-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                        <a href="#" class="btn btn-modal-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Proyecto 3 -->
+        <div class="modal fade" id="modalProyecto3" tabindex="-1" aria-labelledby="modalProyecto3Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProyecto3Label">Weather Dashboard</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <img src="assets/images/proyecto3.jpg" alt="Weather Dashboard" class="img-fluid w-100 modal-project-img mb-3">
+                        <p>
+                            Dashboard meteorológico interactivo que consume datos de la API de OpenWeather. Incluye visualización de datos con gráficos, mapas interactivos, y sistema de alertas para condiciones climáticas específicas. El proyecto demuestra habilidades en consumo de APIs, visualización de datos y diseño responsive.
+                        </p>
+                        <h6 class="fw-bold mb-2">Características principales:</h6>
+                        <ul class="mb-3">
+                            <li>Pronóstico extendido de 7 días</li>
+                            <li>Datos en tiempo real de múltiples ciudades</li>
+                            <li>Gráficos interactivos con Chart.js</li>
+                            <li>Mapas de temperatura y precipitación</li>
+                            <li>Sistema de alertas personalizables</li>
+                            <li>Búsqueda por ubicación</li>
+                        </ul>
+                        <div class="modal-tags mb-2">
+                            <span class="badge project-badge me-1">JavaScript</span>
+                            <span class="badge project-badge me-1">API</span>
+                            <span class="badge project-badge me-1">Chart.js</span>
+                            <span class="badge project-badge">Vanilla JS</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-modal-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                        <a href="#" class="btn btn-modal-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Proyecto 4 -->
+        <div class="modal fade" id="modalProyecto4" tabindex="-1" aria-labelledby="modalProyecto4Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalProyecto4Label">Portfolio Generator</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <img src="assets/images/proyecto4.jpg" alt="Portfolio Generator" class="img-fluid w-100 modal-project-img mb-3">
+                        <p>
+                            Herramienta web que permite a desarrolladores y diseñadores crear portfolios profesionales sin escribir código. Los usuarios pueden elegir entre varios templates, personalizar colores y contenido, previsualizar en tiempo real, y exportar el código HTML/CSS completo.
+                        </p>
+                        <h6 class="fw-bold mb-2">Características principales:</h6>
+                        <ul class="mb-3">
+                            <li>5 templates profesionales</li>
+                            <li>Editor visual intuitivo</li>
+                            <li>Previsualización en tiempo real</li>
+                            <li>Personalización de colores y fuentes</li>
+                            <li>Exportación de código limpio</li>
+                            <li>Responsive por defecto</li>
+                        </ul>
+                        <div class="modal-tags mb-2">
+                            <span class="badge project-badge me-1">Vue.js</span>
+                            <span class="badge project-badge me-1">Node.js</span>
+                            <span class="badge project-badge me-1">Express</span>
+                            <span class="badge project-badge">SPA</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-modal-demo" target="_blank" rel="noopener noreferrer">Ver Demo</a>
+                        <a href="#" class="btn btn-modal-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 6: Testimonios -->
+        <section id="testimonios" class="py-5">
+            <div class="container py-4 py-lg-5">
+                <h2 class="section-title text-center mb-5">Lo Que Dicen de Mí</h2>
+                <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonio 1"></button>
+                        <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="1" aria-label="Testimonio 2"></button>
+                        <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="2" aria-label="Testimonio 3"></button>
+                    </div>
+
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                        <!-- Testimonio 1 -->
+                        <div class="carousel-item active">
+                            <div class="testimonial-card text-center">
+                                <img src="assets/images/testimonial1.jpg" alt="Sarah Johnson" class="rounded-circle testimonial-img mb-4">
+                                <p class="testimonial-text mb-4">
+                                    "John es un desarrollador excepcional. Su capacidad para resolver problemas complejos y entregar código limpio es impresionante. Fue clave en el éxito de nuestro proyecto."
+                                </p>
+                                <h5 class="testimonial-name mb-1">Sarah Johnson</h5>
+                                <p class="testimonial-role mb-0">Project Manager en Tech Solutions</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonio 2 -->
+                        <div class="carousel-item">
+                            <div class="testimonial-card text-center">
+                                <img src="assets/images/testimonial2.jpg" alt="Michael Chen" class="rounded-circle testimonial-img mb-4">
+                                <p class="testimonial-text mb-4">
+                                    "Trabajar con John fue una experiencia fantástica. Su profesionalismo y atención al detalle superaron nuestras expectativas. Altamente recomendado."
+                                </p>
+                                <h5 class="testimonial-name mb-1">Michael Chen</h5>
+                                <p class="testimonial-role mb-0">CEO en StartupXYZ</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonio 3 -->
+                        <div class="carousel-item">
+                            <div class="testimonial-card text-center">
+                                <img src="assets/images/testimonial3.jpg" alt="Emma Williams" class="rounded-circle testimonial-img mb-4">
+                                <p class="testimonial-text mb-4">
+                                    "John no solo tiene habilidades técnicas sólidas, sino también una gran capacidad para comunicarse y trabajar en equipo. Un activo valioso para cualquier proyecto."
+                                </p>
+                                <h5 class="testimonial-name mb-1">Emma Williams</h5>
+                                <p class="testimonial-role mb-0">Lead Designer en Digital Agency</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controles -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 7: Contacto -->
+        <section id="contacto" class="py-5">
+            <div class="container py-4 py-lg-5">
+                <div class="text-center mb-5">
+                    <h2 class="section-title mb-3">Hablemos</h2>
+                    <p class="text-secondary">¿Tienes un proyecto en mente? ¡Me encantaría escucharlo!</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="card contact-card border-0 p-4 p-md-5">
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label fw-medium">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                                    <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fw-medium">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" required>
+                                    <div class="invalid-feedback">Por favor ingresa tu correo electrónico.</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label fw-medium">Asunto</label>
+                                    <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto del mensaje" required>
+                                    <div class="invalid-feedback">Por favor ingresa el asunto.</div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="mensaje" class="form-label fw-medium">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                    <div class="invalid-feedback">Por favor escribe tu mensaje.</div>
+                                </div>
+
+                                <button type="submit" class="btn btn-submit w-100">Enviar Mensaje</button>
+                            </form>
+                        </div>
+
+                        <!-- Redes Sociales -->
+                        <div class="text-center mt-5">
+                            <h4 class="fw-bold mb-4">Sígueme en:</h4>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="mailto:john.doe@email.com" class="social-link" title="Email" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="https://github.com/johndoe" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/johndoe" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://twitter.com/johndoe" class="social-link" title="Twitter" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sección 8: Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <!-- Columna 1: Logo + Copyright -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <img src="assets/images/logo.PNG" alt="John Doe" class="footer-logo mb-3">
+                    <p class="mb-1 text-white-50">© 2026 John Doe. Todos los derechos reservados.</p>
+                    <p class="small text-white-50 mb-0">Hecho con ❤️ y Bootstrap</p>
+                </div>
+
+                <!-- Columna 2: Links Rápidos -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+                    <h5 class="fw-bold text-white mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#sobre-mi" class="footer-link">Sobre Mí</a></li>
+                        <li class="mb-2"><a href="#proyectos" class="footer-link">Proyectos</a></li>
+                        <li><a href="#contacto" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Redes Sociales -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <h5 class="fw-bold text-white mb-3">Redes Sociales</h5>
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="https://github.com/johndoe" class="footer-social-icon" target="_blank" rel="noopener noreferrer" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/johndoe" class="footer-social-icon" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com/johndoe" class="footer-social-icon" target="_blank" rel="noopener noreferrer" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Volver Arriba -->
+    <button type="button" id="btnBackToTop" class="btn-back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5.3.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Scripts: Validación y Volver Arriba -->
+    <script>
+        (() => {
+            'use strict';
+
+            // Validación de Formulario Bootstrap
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+
+            // Botón Volver Arriba
+            const btnBackToTop = document.getElementById('btnBackToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    btnBackToTop.classList.add('show');
+                } else {
+                    btnBackToTop.classList.remove('show');
+                }
+            });
+
+            btnBackToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>

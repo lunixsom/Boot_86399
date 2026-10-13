@@ -1,0 +1,671 @@
+/* ========================================
+   VARIABLES
+======================================== */
+:root {
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-light: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+  --overlay-gradient: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+
+  /* Colores sólidos */
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --dark-color: #1a1a2e;
+  --light-color: #f8f9fa;
+
+  /* Texto */
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+  --text-light: #ffffff;
+
+  /* Fondos */
+  --bg-white: #ffffff;
+  --bg-light: #f7fafc;
+  --bg-dark: #1a1a2e;
+  --bg-footer: #0f0f1e;
+
+  /* Overlay */
+  --overlay-dark: rgba(26, 26, 46, 0.85);
+
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 30px rgba(102, 126, 234, 0.3);
+
+  /* Transiciones */
+  --transition-base: all 0.3s ease;
+
+  /* Layout */
+  --navbar-height: 72px;
+}
+
+/* ========================================
+   BASE
+======================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-white);
+  padding-top: var(--navbar-height);
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: var(--navbar-height);
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.bg-light-section {
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+/* Botón con gradiente reutilizable */
+.btn-gradient {
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  border: none;
+  font-weight: 600;
+  transition: var(--transition-base);
+}
+
+.btn-gradient:hover,
+.btn-gradient:focus {
+  color: var(--text-light);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+.navbar {
+  min-height: var(--navbar-height);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+.navbar-brand .brand-name {
+  font-weight: 700;
+  color: var(--dark-color);
+  font-size: 1.15rem;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--primary-color);
+}
+
+/* Efecto de subrayado en hover con ::after */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 80%;
+}
+
+.btn-contact {
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  transition: var(--transition-base);
+}
+
+.btn-contact:hover,
+.btn-contact:focus {
+  color: var(--text-light);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: var(--bg-white);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-contact {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+#hero {
+  position: relative;
+  background-image: url("../assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-gradient);
+  z-index: 1;
+}
+
+#hero .hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--text-light);
+  max-width: 760px;
+}
+
+#hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 4px;
+  background: var(--text-light);
+  opacity: 0.85;
+  border-radius: 4px;
+  margin: 0 auto 1.5rem;
+}
+
+#hero h2 {
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-buttons .btn {
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+}
+
+.hero-buttons .btn-outline-light {
+  border-width: 2px;
+}
+
+@media (max-width: 767.98px) {
+  #hero {
+    background-attachment: scroll;
+  }
+}
+
+/* ========================================
+   SOBRE MÍ
+======================================== */
+.profile-img {
+  max-width: 280px;
+  border-radius: 50%;
+  border: 6px solid var(--bg-white);
+  box-shadow: var(--shadow-hover);
+}
+
+.interest-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+.interest-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.interest-list i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  width: 1.4rem;
+  text-align: center;
+}
+
+/* ========================================
+   HABILIDADES
+======================================== */
+.skill-card {
+  background: var(--bg-white);
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-md);
+  height: 100%;
+  transition: var(--transition-base);
+}
+
+.skill-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-6px);
+}
+
+.skill-card h3 {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.skill-item {
+  margin-bottom: 1.25rem;
+}
+
+.skill-item:last-child {
+  margin-bottom: 0;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+
+.skill-label span:last-child {
+  color: var(--text-secondary);
+}
+
+.progress {
+  height: 8px;
+  border-radius: 50px;
+  background-color: #e9ecf5;
+}
+
+.progress-bar {
+  background: var(--gradient-primary);
+  border-radius: 50px;
+}
+
+/* ========================================
+   PROYECTOS
+======================================== */
+.project-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-card .card-body h3 {
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.project-card .card-body p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.tech-badge {
+  background: var(--gradient-light);
+  color: var(--secondary-color);
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.4em 0.9em;
+  margin: 0 0.25rem 0.25rem 0;
+  font-size: 0.75rem;
+}
+
+.project-card .btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.project-card .btn-outline-primary:hover {
+  background: var(--gradient-primary);
+  border-color: transparent;
+}
+
+/* Modals */
+.modal-header {
+  background: var(--gradient-primary);
+  color: var(--text-light);
+}
+
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.modal .btn-primary {
+  background: var(--gradient-primary);
+  border: none;
+}
+
+.modal .btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* ========================================
+   TESTIMONIOS
+======================================== */
+.testimonial-carousel {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 2.5rem;
+}
+
+.testimonial-slide {
+  text-align: center;
+  padding: 1rem 2.5rem 0;
+}
+
+.testimonial-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-white);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+.testimonial-name {
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 0.15rem;
+}
+
+.testimonial-role {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: 1rem;
+  filter: none;
+  background-size: 50%;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--primary-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* ========================================
+   CONTACTO
+======================================== */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #dde1ea;
+  padding: 0.65rem 0.9rem;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.2);
+}
+
+/* Estados de validación: solo se activan cuando el form tiene
+   la clase .was-validated (es decir, después de intentar enviarlo).
+   Si no se limita a .was-validated, los campos vacíos se verían
+   en rojo apenas carga la página, antes de que el usuario haga nada. */
+.was-validated .form-control:valid {
+  border-color: #28a745;
+}
+
+.was-validated .form-control:invalid {
+  border-color: #dc3545;
+}
+
+.social-contact {
+  margin-top: 3rem;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-light);
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  transition: var(--transition-base);
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+footer {
+  background-color: var(--bg-footer);
+  color: var(--text-light);
+}
+
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: var(--text-light);
+}
+
+footer .social-icons a {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-light);
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.25rem 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ========================================
+   BOTÓN VOLVER ARRIBA
+======================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition-base);
+  z-index: 1030;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ========================================
+   RESPONSIVE - AJUSTES ADICIONALES
+======================================== */
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-padding {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .profile-img {
+    max-width: 220px;
+  }
+
+  .contact-form {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .testimonial-slide {
+    padding: 0 1.5rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --navbar-height: 64px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
